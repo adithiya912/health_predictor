@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Assessment Result</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Risk Assessment Result</h1>
+    
+    <div class="result-card <%= prediction.prediction ? 'high-risk' : 'low-risk' %>">
+      <h2>Risk Level: <%= prediction.prediction ? 'HIGH RISK' : 'LOW RISK' %></h2>
+      <p>Probability: <%= prediction.risk_percentage %>%</p>
+      <p><%= prediction.recommendation %></p>
+    </div>
+    
+    <a href="/" class="btn">Back to Assessment</a>
+  </div>
+</body>
+</html>
